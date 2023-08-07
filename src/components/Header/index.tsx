@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin, SiWhatsapp, SiInstagram } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
 import { Nav } from "../Nav";
 import avatar from "../../assets/images/avatar.webp";
 
@@ -22,9 +22,6 @@ export function Header() {
                         </a>
                         <a href="https://wa.me/5583988745654" target="_blank" className="hover:text-violet-500">
                             <SiWhatsapp />
-                        </a>
-                        <a href="https://instagram.com/wllyssesjr" target="_blank" className="hover:text-violet-500">
-                            <SiInstagram />
                         </a>
                     </div>
                 </div>
