@@ -1,7 +1,8 @@
 import { useQuery } from "react-query";
-import { Header } from "../../components/Header";
 import { api } from "../../services/api";
+import { Header } from "../../components/Header";
 import { Spinner } from "../../components/Spinner";
+import { Container } from "../../components/Container";
 
 interface RepoProps {
     id: number
@@ -9,14 +10,14 @@ interface RepoProps {
     html_url: string
     language: string
     homepage: string | null
-};
+}
 
 export function Projects() {
 
     const { data: repos, isLoading } = useQuery<RepoProps[]>(['repos'], () => api.getUserRepos(import.meta.env.VITE_USER_NAME));
      
     return (
-        <>
+        <Container>
             <Header />
             <div className="mt-6 w-full flex justify-center flex-wrap gap-4">
                 { isLoading && <Spinner /> }
@@ -52,6 +53,6 @@ export function Projects() {
                     ))
                 }
             </div>
-        </>
+        </Container>
     );
-};
+}

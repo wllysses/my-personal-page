@@ -5,8 +5,9 @@ import { Projects } from "../pages/Projects";
 import { Techs } from "../pages/Techs";
 import { Contact } from "../pages/Contact";
 import { Post } from "../pages/Post";
-import { Admin } from "../pages/Admin";
+import { Login } from "../pages/Login";
 import { Xp } from "../pages/Xp";
+import { Dashboard } from "../pages/Dashboard";
 
 export function AppRoutes() {
     return (
@@ -19,7 +20,8 @@ export function AppRoutes() {
                 <Route path="/projetos" element={ <Projects /> } />
                 <Route path="/tecnologias" element={ <Techs /> } />
                 <Route path="/contato" element={ <Contact /> } />
-                <Route path="/admin" element={ <Admin /> } />
+                <Route path="/login" element={ <Login /> } />
+                <Route path="/dashboard" element={ <Dashboard /> } />
             </Routes>
         </BrowserRouter>
     );

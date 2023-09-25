@@ -1,12 +1,7 @@
-import { Container } from "./components/Container";
-import { AppRoutes } from "./routes/routes";
+import { AppRoutes } from "./routes";
 
 function App() {
-  return (
-    <Container>
-        <AppRoutes />
-    </Container>
-  );
-};
+  return <AppRoutes />;
+}
 
 export default App;

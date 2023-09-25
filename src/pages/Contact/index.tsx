@@ -1,8 +1,9 @@
-import { z } from "zod";
-import { Header } from "../../components/Header";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
+import { Header } from "../../components/Header";
+import { Container } from "../../components/Container";
 
 export function Contact() {
 
@@ -33,15 +34,15 @@ export function Contact() {
                 alert('E-mail enviado com sucesso!');
                 reset();
                 return;
-            };
+            }
         })
         .catch((err: Error) => {
             console.log('Error: ' + err.message);
         });
-    };
+    }
     
     return (
-        <>
+        <Container>
             <Header />
             <form className="mt-6 w-full flex flex-col gap-4" onSubmit={handleSubmit(handleSendMessage)}>
                 <div className="flex flex-col gap-2">
@@ -61,6 +62,6 @@ export function Contact() {
                 </div>
                 <button type="submit" className="bg-violet-500 hover:bg-violet-400 w-full p-2 text-white font-manrope">Enviar</button>
             </form>
-        </>
+        </Container>
     );
-};
+}

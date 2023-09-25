@@ -1,9 +1,10 @@
-import { Header } from "../../components/Header";
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript, SiNodedotjs, SiStyledcomponents, SiTailwindcss, SiBootstrap, SiSass, SiRedux, SiNextdotjs, SiAxios, SiFigma, SiExpress, SiPostgresql, SiPrisma , SiGit } from "react-icons/si";
+import { Container } from "../../components/Container";
+import { Header } from "../../components/Header";
 
 export function Techs() {
     return (
-        <>
+        <Container>
             <Header />
             <ul className="w-full flex items-center justify-center flex-wrap gap-4">
                 <li className="mt-6 w-32 h-32 border flex items-center justify-center flex-col gap-2 dark:border-violet-500">
@@ -79,6 +80,6 @@ export function Techs() {
                     <h4 className="font-syne">Git</h4>
                 </li>
             </ul>
-        </>
+        </Container>
     );
-};
+}

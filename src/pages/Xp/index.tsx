@@ -1,8 +1,9 @@
+import { Container } from "../../components/Container";
 import { Header } from "../../components/Header";
 
 export function Xp() {
     return (
-        <>
+        <Container>
             <Header />
             <ul className="mt-6 w-full">
                 <li className="p-4 border border-[#b2b2b2] dark:border-violet-500">
@@ -25,6 +26,6 @@ export function Xp() {
                     </div>
                 </li>
             </ul>
-        </>
+        </Container>
     );
-};
+}

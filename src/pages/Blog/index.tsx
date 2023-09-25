@@ -1,22 +1,23 @@
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
-import { Header } from "../../components/Header";
 import { api } from "../../services/api";
+import { Header } from "../../components/Header";
 import { Spinner } from "../../components/Spinner";
+import { Container } from "../../components/Container";
 
 interface PostProps {
     id: number
     title: string
     resume: string
     created_at: string
-};
+}
 
 export function Blog() {
 
     const { data: posts, isLoading } = useQuery<PostProps[]>(['posts'], api.getPosts);
 
     return (
-        <>
+        <Container>
             <Header />
             <div className="mt-6 w-full flex flex-col gap-4">
                 { isLoading && <Spinner /> }
@@ -36,6 +37,6 @@ export function Blog() {
 
                 }
             </div>
-        </>
+        </Container>
     );
-};
+}
